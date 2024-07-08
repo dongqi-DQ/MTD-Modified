@@ -177,6 +177,7 @@ def Track(fileno,file_address,variable,label_0,th,r):
     if not os.path.exists(os.getcwd()+"/Output/"):
         os.makedirs(os.getcwd()+"/Output/")
     xr_data.to_netcdf(path=os.getcwd()+"/Output/"+str(fileno)+"_Tracked.nc")
+    Connected_objects = Connected_objects.to_dataset(name="connected_objects")
     Connected_objects.to_netcdf(path=os.getcwd()+"/Output/"+str(fileno)+"_Connected_objects.nc")
     
     ### returning the outputs
