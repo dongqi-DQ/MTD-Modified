@@ -10,7 +10,7 @@ import numpy as np
 from scipy import ndimage
 from skimage.measure import label
 
-def convolve(two_d_arrr,R,Th, a_filter_size = 10, area_filter = True):
+def convolve(two_d_arrr,R,Th, a_filter_size = 5, area_filter = True):
     '''
     R: smoothing window
     Th: threshold 

@@ -17,10 +17,10 @@ for more information please refer to https://doi.org/10.21203/rs.3.rs-783979/v1
 import os
 from Libraries.Track import Track
 
-file_names=os.listdir(os.getcwd()+"/Data/")
+file_names=sorted(os.listdir(os.getcwd()+"/Data/"))
 for f in range(len(file_names)):
     print('Tracking ... '+str(file_names[f]))
-    file_address,variable,label_0,th,r=os.getcwd()+"/Data/"+file_names[f],'rainrate',0,3,3    
+    file_address,variable,label_0,th,r=os.getcwd()+"/Data/"+file_names[f],'rainrate',0,1,3    
     xr_tracked,connected_objs=Track(f,file_address,variable,label_0,th,r)
     
 
